@@ -33,6 +33,8 @@ const router=express.Router()
  *        description: Blog successfully created
  *      400:
  *        description: Invalid title or content
+ *      401:
+ *        description: Unauthorized access
  *      500:
  *        description: Internal server error
  *
@@ -53,6 +55,8 @@ router.post('/create',fetchuser,createBlogController)
  *    responses:
  *      200:
  *        description: Retrieved blog successfully
+ *      401:
+ *        description: Unauthorized access
  *      500:
  *        description: Internal server error
  *
@@ -80,6 +84,8 @@ router.get("/",fetchuser,getAllBlog)
  *        description: Blog found
  *      400:
  *        description: Blog not found
+ *      401:
+ *        description: Unauthorized access
  *      500:
  *        description: Internal server error
  *
