@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 
 app.get('/',(req,res)=>{
-    res.send("hello")
+    res.send("Server is up")
 })
 
 app.use('/api-docs',serve,setup)
