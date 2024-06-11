@@ -17,6 +17,15 @@ const updateBlog=async(req,res)=>{
             if(existblog.authorId!=req.user.id){
                 return res.status(401).json({success:false,message:"Unauthorized access"});   
             }else{
+                if(!title && !content){
+                    return res.status(400).json({success:false,message:"Enter a title or content"});
+                }
+                if(title.length<3){
+                    return res.status(400).json({success:false,message:"Title must be of length greater than 2"});
+                }
+                if(content.trim().length<11){
+                    return res.status(400).json({success:false,message:"Content must be of length greater than 10"});
+                }
                 if(!content){
                     const newblog=await prisma.blog.update({
                         where:{

@@ -2,6 +2,7 @@ const {PrismaClient}=require('@prisma/client');
 const prisma=new PrismaClient()
 
 const createBlogController=async(req,res)=>{
+
     try {
         const {title,content}=req.body;
         if(!title || title.length<3){
