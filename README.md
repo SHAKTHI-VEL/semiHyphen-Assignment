@@ -1,6 +1,6 @@
 # SEMI-HYPHEN ASSIGNMENT
 
- To develop a RESTful API for a simple blogging platform. The API should allow users to perform CRUD operations (Create, Read, Update, Delete) on blog posts.
+ To develop a RESTful API for a simple blogging platform. The API allow users to perform CRUD operations (Create, Read, Update, Delete) on blog posts.
 
 ## Installation
 
